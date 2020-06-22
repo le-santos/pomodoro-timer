@@ -1,0 +1,56 @@
+body {
+	background-image: linear-gradient(to right, whitesmoke 10%, lightseagreen);
+}
+
+.main-control {
+	margin: 40px auto;
+}
+
+header {
+	text-align: center;
+	margin: 20px auto;
+}
+
+.header-span {
+	display: block;
+	float: right;
+}
+
+h1 {
+	text-align: center;
+}
+
+.time-control {
+	display: block;
+	text-align: center;
+}
+
+.time {
+	display: block;
+	margin: 10px auto;
+	padding: 12px 8px;
+	max-width: 20rem;
+	min-width: 5em;
+	text-align: center;
+	background: #4a3f3f;
+	color: #00bf59;
+	font-size: 24px;
+	font-weight: bold;
+}
+
+.time-heading {
+	display: block;
+	text-align: center;
+}
+
+#page-footer {
+	position: fixed;
+	bottom: 0px;
+	padding: 16px;
+	background-color: #4a3f3f;
+	
+}
+
+#page-footer a {
+	color: whitesmoke;
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - A Pen by  Leandro</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css'><link rel="stylesheet" href="./style.css">
+
+</head>
+
+<body class='container-fluid'>
+
+	<header class='page-header'>
+		<h1>
+			Pomodoro time tracker
+		</h1>
+	</header>
+
+	<div class='row justify-content-center'>
+		<div class='main-control'>
+			<button type="button" class='btn btn-primary' id='start'>Start</button>
+			<button type="button" class='btn btn-secondary' id='stop'>Stop</button>
+			<button type="button" class='btn btn-danger' id='reset'>Reset</button>
+		</div>
+	</div>
+
+	<div class='row justify-content-center'>
+		<div class='col-6' id='work'>
+			<h3 class='time-heading'>WORK</h3>
+			<div class='time' id='work-time'>25:00</div>
+			<div class='time-control button-group'>
+				<button type="button" class='btn btn-dark btn-md' id='work-more' name='add'>+</button>
+				<button type="button" class='btn btn-secondary btn-md' id='work-less' name='subt'>-</button>
+			</div>
+		</div>
+
+		<div class='col-6' id='rest'>
+			<h3 class='time-heading'>REST</h3>
+			<div class='time' id='rest-time'>05:00</div>
+			<div class='time-control button-group'>
+				<button type="button" class='btn btn-dark btn-md' id='rest-more' name='add'>+</button>
+				<button type="button" class='btn btn-secondary btn-md' id='rest-less' name='subt'>-</button>
+			</div>
+		</div>
+	</div>
+	<div class='row' >
+		<div class='col-12 text-center' id='page-footer'> 
+			<a href="https://github.com/le-santos/pomodoro-timer" target="_blank">GitHub le-santos</a>
+		</div>
+	</div>
+
+  <script  src="./script.js"></script>
+
+</body>
+</html>
