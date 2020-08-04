@@ -3,12 +3,12 @@ const counters = {
   rest: { min: 05, sec: 0 },
 };
 
-const timer = document.getElementById("work-time");
-const rest = document.getElementById("rest-time");
+const timer = document.getElementById("work-time"),
+  rest = document.getElementById("rest-time");
 
 // Creating the string for the 2 digits format (00:00)
 
-let setDisplayNum = (m, s, clock) => {
+const setDisplayNum = (m, s, clock) => {
   m = ("00" + m).slice(-2);
   s = ("00" + s).slice(-2);
   clock.innerHTML = `${m}:${s}`;
@@ -43,16 +43,16 @@ const start = document.getElementById("start");
 const stop = document.getElementById("stop");
 const reset = document.getElementById("reset");
 
-var goTimer; // Variable for the setInterval counter
+const countVariable = { goTimer: "" }; // Timer variable
 
 const getCounting = function () {
   start.removeEventListener("click", getCounting);
-  goTimer = setInterval(count, 1000);
+  countVariable.goTimer = setInterval(count, 1000);
 };
 
 const stopCount = function () {
   start.addEventListener("click", getCounting);
-  clearInterval(goTimer);
+  clearInterval(countVariable.goTimer);
 };
 
 const resetCount = function () {
@@ -63,7 +63,7 @@ const resetCount = function () {
   setDisplayNum(counters.work.min, counters.work.sec, timer);
   setDisplayNum(counters.rest.min, counters.rest.sec, rest);
 
-  clearInterval(goTimer);
+  clearInterval(countVariable.goTimer);
 };
 
 start.addEventListener("click", getCounting);
